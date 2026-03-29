@@ -1,0 +1,236 @@
+/* body */
+/* para que html y body ocupen toda la altura de la pantalla */
+html, body {
+  height: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #e9e4e4;
+	display: flex;
+  	flex-direction: column; /* colocamos header, main y footer en vertical */
+}
+
+/* cabecera */
+header {
+	background: #254F9B;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;	/*cuando se superponga con otros elementos, el header queda por delante*/
+}
+main {
+	width: 70%;
+	margin: 40px auto;
+	flex: 1; /* empuja el footer hacia abajo */
+}
+
+h2 {
+	text-align: center;      
+	margin: 20px 0;         
+	color: #254F9B;         
+	font-size: 28px;      
+}
+/* enlaces menú */
+nav a {
+	color: white;
+	margin: 10px;
+}
+nav a:hover {
+	color: #C20016;
+}
+/* INICIO:*/
+/* contenedor centrado */
+.inicio {
+	width: 70%;
+	margin: 40px auto;
+	text-align: center;
+}
+.inicio p {
+	max-width: 600px;
+	margin: 10px auto;
+	
+}
+/* imagen super */
+.inicio img {
+	width: 100%;
+	margin: 20px 0;
+}
+.inicio a {
+	display: inline-block; /* aplicar estilos de bloque a elementos en línea - texto*/
+	margin-top: 10px;
+	color: white;
+	background: #C20016;
+	padding: 8px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.inicio a:hover {
+	background: #a00012; /* rojo más oscuro */
+}
+
+/* PRODUCTOS */
+
+/* contenedor ppal con grid */
+.band {
+	display: grid;
+	gap: 20px;
+	width: 90%;
+	margin: 0 auto; /* centra el grid */
+}
+
+/* responsive: tablet */
+@media only screen and (min-width: 600px) {
+	.band {
+		grid-template-columns: 1fr 1fr; /* 2 columnas */
+	}
+}
+
+/* responsive: escritorio */
+@media only screen and (min-width: 900px) {
+	.band {
+		grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales poniendo 4 veces 1fr */
+	}
+}
+
+/* tarjeta de producto */
+.card {
+	background: white;
+ 	display: flex;
+  	flex-direction: column; /* imagen arriba, texto abajo */
+	min-height: 100%; /* todas con misma altura */
+  	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	position: relative;
+}
+
+/* efecto al pasar el ratón */
+.card:hover {
+  	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	top:-5px; /* lo hacemos con position relative en .card, si no no funciona*/
+}
+
+/* contenido de la tarjeta */
+.card article {
+	padding: 20px;
+	display: flex;
+	flex: 1; /* ocupa todo el espacio disponible */
+	flex-direction: column;
+	justify-content: space-between; /* reparte contenido */
+}
+
+.card h3 {
+	font-size: 18px;
+	margin: 0;
+	color: #424242;
+}
+
+/* texto descriptivo tipo proteina y así - interlineado*/
+.card p {
+	line-height: 1.4;
+}
+
+/* precio */
+.card span {
+	display: block; /* permite margen vertical porque convierte el span en un bloque */
+	margin-top: 10px;
+	font-weight: bold;
+	color: #C20016;
+}
+
+/* imagen del producto */
+.card .thumb {
+	padding-bottom: 60%; /* la altura es el 60% del ancho*/
+	background-size: cover; /* rellena sin deformarse la imagen */
+	background-position: center; 
+}
+
+/* imágenes dentro del css */
+.item-arroz .thumb { background-image: url('images/arroz.jpg'); }
+.item-pasta .thumb { background-image: url('images/pasta.jpg'); }
+.item-pollo .thumb { background-image: url('images/pollo.jpg'); }
+.item-salmon .thumb { background-image: url('images/salmon.jpg'); }
+.item-huevos .thumb { background-image: url('images/huevos.jpg'); }
+.item-garbanzos .thumb { background-image: url('images/garbanzos.jpg'); }
+.item-lentejas .thumb { background-image: url('images/lentejas.jpg'); }
+.item-brocoli .thumb { background-image: url('images/brocoli.jpg'); }
+.item-zanahoria .thumb { background-image: url('images/zanahoria.jpg'); }
+.item-calabacin .thumb { background-image: url('images/calabacin.jpg'); }
+.item-tomate .thumb { background-image: url('images/tomate.jpg'); }
+.item-aguacate .thumb { background-image: url('images/aguacate.jpg'); }
+.item-leche .thumb { background-image: url('images/leche.jpg'); }
+.item-yogur .thumb { background-image: url('images/yogur.jpg'); }
+.item-pan .thumb { background-image: url('images/pan.jpg'); }
+.item-aceite .thumb { background-image: url('images/aceite.jpg'); }
+
+/* tabla en carrito*/
+table {
+	width: 100%;
+	border-collapse: collapse; /*unir los bordes de las celdas de una tabla*/
+	background: white;
+	margin-top: 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+tr{
+	text-align: center;
+}
+tr:hover {
+	background: #dfdddd;
+}
+
+th {
+	background: #254F9B; 
+	color: white;
+	padding: 10px;
+}
+td {
+  	padding: 10px;
+    border-bottom: 1px solid #b9b9b9; /*linea debajo*/
+}
+/* total carrito */
+.total {
+	color: #C20016;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.total-line {
+	margin-top: 20px;
+	font-size: 18px;
+	text-align: center;
+}
+/* formulario en contacto */
+form {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	margin: 40px auto;
+	background: white;      
+	padding: 25px;   
+	border-radius: 10px; /* bordes redondeados */
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+input, textarea {
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #cecbcb;
+  	border-radius: 5px;
+}
+button {
+  background: #C20016;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #a00012;
+}
+

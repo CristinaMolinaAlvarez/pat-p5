@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Carrelog</h1>
+
+    <nav>
+      <a href="inicio.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Productos disponibles</h2>
+    <!-- 
+    Estructura del catálogo de productos:
+    - .band : contenedor principal que usa grid para organizar todos los productos en filas y columnas
+    - .item-* : identifica cada producto y se usa en el CSS para asignar la imagen correspondiente
+    - .card : representa la tarjeta visual de cada producto (con sombra, estructura vertical...)
+    - .thumb : es el contenedor de la imagen. No usamos <img>, sino background-image en CSS para que todas las imágenes tengan el mismo tamaño y proporción
+    - article : contiene el texto del producto (nombre, descripción y precio).
+
+    Así se separa el HTML con la estructura del CSS con diseño 
+    -->
+    <section class="band">
+
+      <div class="item-arroz">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Arroz</h3>
+            <p>Base para recetas</p>
+            <span>1.50€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-pasta">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Pasta integral</h3>
+            <p>Carbohidrato saludable</p>
+            <span>1.80€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-pollo">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Pollo</h3>
+            <p>Proteína</p>
+            <span>5.00€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-salmon">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Salmón</h3>
+            <p>Rico en omega 3</p>
+            <span>7.50€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-huevos">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Huevos</h3>
+            <p>Proteína completa</p>
+            <span>2.50€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-garbanzos">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Garbanzos</h3>
+            <p>Ricos en fibra</p>
+            <span>1.20€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-lentejas">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Lentejas</h3>
+            <p>Fuente de hierro</p>
+            <span>1.30€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-brocoli">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Brócoli</h3>
+            <p>Verdura saludable</p>
+            <span>1.90€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-zanahoria">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Zanahoria</h3>
+            <p>Ideal para guarniciones</p>
+            <span>1.00€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-calabacin">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Calabacín</h3>
+            <p>Muy versátil</p>
+            <span>1.40€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-tomate">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Tomate</h3>
+            <p>Base para recetas</p>
+            <span>1.60€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-aguacate">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Aguacate</h3>
+            <p>Grasas saludables</p>
+            <span>2.20€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-leche">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Leche</h3>
+            <p>Producto diario</p>
+            <span>1.20€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-yogur">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Yogur</h3>
+            <p>Fuente de calcio</p>
+            <span>2.00€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-pan">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Pan integral</h3>
+            <p>Carbohidrato saludable</p>
+            <span>1.30€</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="item-aceite">
+        <div class="card">
+          <div class="thumb"></div>
+          <article>
+            <h3>Aceite de oliva</h3>
+            <p>Grasa esencial</p>
+            <span>4.50€</span>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; Hecho en PAT 2026</p>
+  </footer>
+
+</body>
+</html>
