@@ -145,6 +145,23 @@ nav a:hover {
 	background-size: cover; /* rellena sin deformarse la imagen */
 	background-position: center; 
 }
+/*botones añadir y quitar prod*/
+.btn-add {
+  margin-top: 10px;
+  background: #254F9B;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #C20016;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
 
 /* imágenes dentro del css */
 .item-arroz .thumb { background-image: url('images/arroz.jpg'); }
@@ -188,6 +205,8 @@ td {
   	padding: 10px;
     border-bottom: 1px solid #b9b9b9; /*linea debajo*/
 }
+
+
 /* total carrito */
 .total {
 	color: #C20016;
